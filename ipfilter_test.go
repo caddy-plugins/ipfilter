@@ -9,8 +9,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/caddyserver/caddy"
-	"github.com/caddyserver/caddy/caddyhttp/httpserver"
+	"github.com/admpub/caddy"
+	"github.com/admpub/caddy/caddyhttp/httpserver"
 	"github.com/oschwald/maxminddb-golang"
 )
 
