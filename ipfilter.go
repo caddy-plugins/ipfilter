@@ -15,7 +15,7 @@ import (
 	"github.com/admpub/caddy"
 	"github.com/admpub/caddy/caddyhttp/httpserver"
 	"github.com/oschwald/maxminddb-golang"
-	"github.com/phuslu/iploc"
+	//"github.com/phuslu/iploc" // 内存消耗太大
 )
 
 // IPFilter is a middleware for filtering clients based on their ip or country's ISO code.
@@ -52,9 +52,9 @@ var ErrIPDatabaseRequired = errors.New("ipfilter: Database is required to block/
 
 var GetCountryCode = func(c IPFConfig, clientIP net.IP) (string, error) {
 	if c.DBHandler == nil {
-		codeBytes := iploc.Country(clientIP)
-		return string(codeBytes), nil
-		//return ``, ErrIPDatabaseRequired
+		// codeBytes := iploc.Country(clientIP)
+		// return string(codeBytes), nil
+		return ``, ErrIPDatabaseRequired
 	}
 	// do the lookup.
 	var result OnlyCountry
