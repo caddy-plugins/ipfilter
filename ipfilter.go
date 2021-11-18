@@ -15,7 +15,7 @@ import (
 	"github.com/admpub/caddy"
 	"github.com/admpub/caddy/caddyhttp/httpserver"
 	"github.com/oschwald/maxminddb-golang"
-	//"github.com/phuslu/iploc" // 内存消耗太大
+	//"github.com/phuslu/iploc" // 内存消耗太大(自己按需采用，默认就不采用了)
 )
 
 // IPFilter is a middleware for filtering clients based on their ip or country's ISO code.
